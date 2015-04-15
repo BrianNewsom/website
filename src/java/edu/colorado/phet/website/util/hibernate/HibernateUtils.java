@@ -444,7 +444,7 @@ public class HibernateUtils {
         return languageDefaultSim == null ? defaultSim : languageDefaultSim;
     }
 
-    public static void addPreferredFullSimulationList( List<LocalizedSimulation> lsims, Session session, Locale locale ) {
+    public static void addPreferredFullSimulationList( List<LocalizedSimulation> lsims, Session session, Locale locale, boolean listBothVersions ) {
         logger.debug( "1" );
         Criteria criteria = session.createCriteria( Simulation.class )
                 .setFetchMode( "localizedSimulations", FetchMode.SELECT )
@@ -459,7 +459,7 @@ public class HibernateUtils {
             if ( !simulation.isVisible() ) {
                 continue;
             }
-            if ( simsWithTwoVersions.contains( simulation.getName() ) && simulation.getProject().getType() != Project.TYPE_HTML ) {
+            if ( !listBothVersions && simsWithTwoVersions.contains( simulation.getName() ) && simulation.getProject().getType() != Project.TYPE_HTML ) {
                 continue;
             }
             lsims.add( pickBestTranslation( simulation, locale ) );
@@ -467,11 +467,15 @@ public class HibernateUtils {
         logger.debug( "3" );
     }
 
-    /**
-     * This method is used when displaying the sims by category to filter out legacy versions
-     * @param simulations A list of Simulations to search through
-     * @return A set of sim names that have multiple version (html and legacy)
-     */
+    public static void addPreferredFullSimulationList( List<LocalizedSimulation> lsims, Session session, Locale locale ) {
+        addPreferredFullSimulationList( lsims, session, locale, false );
+    }
+
+        /**
+         * This method is used when displaying the sims by category to filter out legacy versions
+         * @param simulations A list of Simulations to search through
+         * @return A set of sim names that have multiple version (html and legacy)
+         */
     public static Set<String> getSimsWithTwoVersions( List simulations ) {
         // sims that appear twice must have an html5 version
         Set<String> simsSet = new HashSet<String>();
@@ -488,7 +492,7 @@ public class HibernateUtils {
 
     public static List<LocalizedSimulation> preferredFullSimulationList( Session session, Locale locale ) {
         LinkedList<LocalizedSimulation> ret = new LinkedList<LocalizedSimulation>();
-        addPreferredFullSimulationList( ret, session, locale );
+        addPreferredFullSimulationList( ret, session, locale, true );
         return ret;
     }
 

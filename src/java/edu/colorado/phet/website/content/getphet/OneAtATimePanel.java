@@ -51,7 +51,7 @@ public class OneAtATimePanel extends PhetPanel {
                 if ( simulation.getSimulation().isHTML() ) {
                     link.add( new AttributeModifier( "download", true, new Model<String>( "" ) ) );
                 }
-                link.add( new Label( "simulation-title", simulation.getTitle() ) );
+                link.add( new Label( "simulation-title", simulation.getTitleWithHTMLSuffix() ) );
                 item.add( link );
             }
         } );

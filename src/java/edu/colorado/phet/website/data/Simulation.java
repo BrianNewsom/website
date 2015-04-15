@@ -49,6 +49,7 @@ public class Simulation implements Serializable, IntId {
     private String designTeam;
     private String libraries;
     private String thanksTo;
+    private String videoUrl;
 
     private boolean underConstruction;
     private boolean guidanceRecommended;
@@ -448,6 +449,14 @@ public class Simulation implements Serializable, IntId {
 
     public void setThanksTo( String thanksTo ) {
         this.thanksTo = thanksTo;
+    }
+
+    public String getVideoUrl() {
+        return videoUrl;
+    }
+
+    public void setVideoUrl( String videoUrl ) {
+        this.videoUrl = videoUrl;
     }
 
     public boolean isUnderConstruction() {

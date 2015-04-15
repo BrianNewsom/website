@@ -308,9 +308,10 @@ body#offline-installer-body .sim-download {
 
 .teachers-video-player {
     display: block;
-    margin: 1em auto 2em auto;
-    width: 400px;
-    height: 225px;
+    margin: 1em 0 2em;
+    width: 425px;
+    height: 239px;
+    left: 25px;
     position: relative;
 }
 

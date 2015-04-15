@@ -233,7 +233,9 @@ public class SimulationMainPanel extends PhetPanel {
         }
 
         final boolean signedIn = PhetSession.get().isSignedIn();
-        final boolean hasVideo = isHTML; // for now assume all html sims have a video
+
+        final String videoUrl = simulation.getSimulation().getVideoUrl();
+        final boolean hasVideo = ( videoUrl != null );
 
         if ( hasVideo ) {
             add( new LocalizedText( "video-primer", "simulationMainPanel.videoPrimer" ) );
@@ -243,7 +245,8 @@ public class SimulationMainPanel extends PhetPanel {
                     add( new AttributeModifier( "class", true, new Model<String>( "teachers-video-player teachers-video-blocker" ) ) );
                 }
                 add( new WebMarkupContainer( "video-iframe" ) {{
-                    add( new AttributeModifier( "src", true, new Model<String>( "https://player.vimeo.com/video/123764106" ) ) );
+//                    videoUrl = "https://player.vimeo.com/video/123764106";
+                    add( new AttributeModifier( "src", true, new Model<String>( videoUrl ) ) );
                 }} );
             }} );
 

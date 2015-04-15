@@ -36,6 +36,7 @@ import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.list.ListView;
 import org.apache.wicket.markup.html.panel.FeedbackPanel;
 import org.apache.wicket.model.Model;
+import org.apache.wicket.model.PropertyModel;
 import org.apache.wicket.model.ResourceModel;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -252,6 +253,8 @@ public class AdminSimPage extends AdminPage {
                 }
             }
         } );
+
+        add( new VideoUrlForm( "video-url-form" ) );
 
         add( new CategoryForm( "category-form" ) );
 
@@ -765,6 +768,38 @@ public class AdminSimPage extends AdminPage {
 
         public String getCurrentValue() {
             return StringUtils.getEnglishStringDirect( getHibernateSession(), simulation.getLearningGoalsKey() );
+        }
+    }
+
+    public class VideoUrlForm extends Form {
+
+        private StringTextField urlField;
+
+        public VideoUrlForm( String id ) {
+            super( id );
+
+            String curValue = simulation.getVideoUrl();
+            if ( curValue == null ) {
+                curValue = "";
+            }
+            urlField = new StringTextField( "video-url", new Model( curValue ) );
+            add( urlField );
+        }
+
+        @Override
+        protected void onSubmit() {
+            super.onSubmit();
+            final String text = ( urlField == null || urlField.getModelObject() == null ) ? "" : urlField.getModelObject();
+
+            HibernateUtils.wrapTransaction( getHibernateSession(), new HibernateTask() {
+                public boolean run( Session session ) {
+                    Simulation sim = (Simulation) session.load( Simulation.class, simulation.getId() );
+                    logger.warn( "Setting video url to " + text + " for " + simulation.getName() );
+                    sim.setVideoUrl( text );
+                    session.update( sim );
+                    return true;
+                }
+            } );
         }
     }
 

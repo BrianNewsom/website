@@ -18,6 +18,7 @@
         <property name="hasCreativeCommonsAttributionLicense"/>
         <property name="faqVisible"/> <!-- Need to non-nullify. see https://hibernate.onjira.com/browse/HHH-4341 -->
         <property name="simulationVisible" column="visible"/>
+        <property name="videoUrl" column="videourl"/>
         <many-to-one name="project" class="edu.colorado.phet.website.data.Project" not-null="true" lazy="false"/>
 
         <!-- translated versions of this simulation. store this information in the LocalizedSimulation instances -->
