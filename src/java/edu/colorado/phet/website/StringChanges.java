@@ -80,13 +80,13 @@ public class StringChanges {
                                                                                 "<p><strong>iPad</strong><br/>" +
                                                                                 "iOS 7+<br/>" +
                                                                                 "Safari<br/>" +
-                                                                                "The HTML5 PhET sims are supported on iPad2 or later. For iPad compatible sims <a {0}>click here</a><br></p>" +
+                                                                                "The HTML5 PhET sims are supported on iPad2 or later. For iPad compatible sims <a {0}>click here</a>.<br></p>" +
                                                                                 "<p><strong>Android</strong><br/>" +
                                                                                 "Not officially supported. Please contact {1} with troubleshooting issues.<br/>" +
                                                                                 "If you are using the HTML5 sims on Android, we recommend using the latest version of Google Chrome and Android 4.1+</p>" +
                                                                                 "<p><strong>Chromebook</strong><br/>" +
                                                                                 "Latest version of Google Chrome<br/>" +
-                                                                                "The HTML5 and Flash PhET sims are supported on all Chromebooks. For Chromebook compatible sims <a {2}>click here</a></p>" +
+                                                                                "The HTML5 and Flash PhET sims are supported on all Chromebooks. For Chromebook compatible sims <a {2}>click here</a>.</p>" +
                                                                                 "<p><strong>Windows Systems</strong><br/>" +
                                                                                 "Microsoft Internet Explorer 9 or later, latest version of Firefox, latest version of Google Chrome</p>" +
                                                                                 "<p><strong>Macintosh Systems</strong><br/>" +
@@ -95,6 +95,79 @@ public class StringChanges {
                                                                                 "<p><strong>Linux Systems</strong><br/>" +
                                                                                 "Not officially supported. Please contact {1} with troubleshooting issues.</p>" );
 
+        StringUtils.deleteString( session, "troubleshooting.main.q6.answer" );
+        StringUtils.deleteString( session, "faq.mobileDevices.title" );
+        StringUtils.deleteString( session, "faq.mobileDevices.answer" );
+        StringUtils.deleteString( session, "troubleshooting.main.q1.answer" );
+        StringUtils.deleteString( session, "troubleshooting.mobile.p2" );
+        StringUtils.deleteString( session, "troubleshooting.mobile.p3" );
+        StringUtils.deleteString( session, "troubleshooting.mobile.p4" );
+        StringUtils.deleteString( session, "troubleshooting.mobile.p6" );
+        StringUtils.addString( session, "troubleshooting.main.q6.answer", "<p>The HTML5 sims are optimized for an iPad2 resolution (1024 x 768 pixels), but work on other resolutions and will scale based on your device" +
+                                                                          "          resolution.</p>" +
+                                                                          "        <p>The Java and Flash PhET simulations work best at a screen resolution of 1024 x 768 pixels or higher. (Some of them are written so that they" +
+                                                                          "          cannot be resized.) At lower resolution (e.g. 800 x 600), all the controls may not fit on your screen. To change your screen resolution," +
+                                                                          "          follow the directions below:</p>" +
+                                                                          "        <p><strong>Windows 7/8</strong><br/>" +
+                                                                          "        <ol>" +
+                                                                          "          <li>From Start menu, click on \"Control Panel.\"</li>" +
+                                                                          "          <li>Choose \"Display\".</li>" +
+                                                                          "          <li>Press \"Adjust screen resolution\".</li>" +
+                                                                          "          <li>Use the \"Resolution\" slider to select a resolution and click \"OK.\"</li>" +
+                                                                          "        </ol></p>" +
+                                                                          "        <p><strong>Windows Vista</strong><br/>" +
+                                                                          "        <ol>" +
+                                                                          "          <li>From Start menu, click on \"Control Panel.\"</li>" +
+                                                                          "          <li>Press \"Adjust screen resolution\" under \"Appearance and Personalization.\"</li>" +
+                                                                          "          <li>Use the \"Screen resolution\" slider to select a resolution and click \"OK.\"</li>" +
+                                                                          "        </ol></p>" +
+                                                                          "        <p><strong>Windows 2000/XP</strong><br/>" +
+                                                                          "        <ol>" +
+                                                                          "          <li>From Start menu, click on \"Control Panel.\"</li>" +
+                                                                          "          <li>Double click on \"Display\" icon.</li>" +
+                                                                          "          <li>Select the \"Settings\" tab.</li>" +
+                                                                          "          <li>Use the \"Screen resolution\" slider to select a resolution and click \"OK.\"</li>" +
+                                                                          "        </ol></p>" +
+                                                                          "        <p><strong>Macintosh</strong><br/>" +
+                                                                          "        <ol>" +
+                                                                          "          <li>Open the System Preferences (either from the Dock or from the Apple menu).</li>" +
+                                                                          "          <li>Open the Displays Panel and choose the Display tab.</li>" +
+                                                                          "          <li>On the left of the Displays tab you can select one of the Resolutions from the list.</li>" +
+                                                                          "        </ol></p>" );
+        StringUtils.addString( session, "faq.mobileDevices.title" , "Can PhET simulations be used on my tablet/iPad/Android/Chromebook devices?" );
+        StringUtils.addString( session, "faq.mobileDevices.answer" , "<p>" +
+                                                                 "          The Java and Flash simulations cannot run on a tablet/iPad/Android device because those devices do not fully support Java or Flash, which is" +
+                                                                 "          required to run the Java and Flash PhET sims." +
+                                                                 "        </p>" +
+                                                                 "            <p><strong>iPad</strong><br/>" +
+                                                                 "              The HTML5 PhET sims are supported on iPad2 or later. For iPad compatible sims" +
+                                                                 "              <a {0}>click here</a>." +
+                                                                 "            </p>" +
+                                                                 "            <p><strong>Chromebook</strong><br/>" +
+                                                                 "              The HTML5 and Flash PhET sims are supported on all Chromebooks using the latest version of Google Chrome. For Chromebook compatible sims" +
+                                                                 "              <a {1}>click here</a>." +
+                                                                 "            </p>" +
+                                                                 "            <p><strong>Android</strong><br/>" +
+                                                                 "              We do not currently test our simulations on Android devices due to the fragmented nature of the device ecosystem. However, the " +
+                                                                 "                <a {1}>HTML5 sims</a> <i>should</i> function. For optimal" +
+                                                                 "              performance, we recommend opening the sims in the latest version of Google Chrome." +
+                                                                 "            </p>" +
+                                                                 "        <p>" +
+                                                                 "          If your school district is considering the purchase of iPads or tablet devices, please understand that you will be limited to HTML5" +
+                                                                 "          sims. For more information, see our <a {2}>system requirements</a>." +
+                                                                 "        </p>" );
+        StringUtils.addString( session, "troubleshooting.main.q1.answer", "<p>The original sims are programmed in Java or Flash. Flash is installed in most modern desktop web browsers while Java is a free application that can be downloaded from Oracle. To run the Java-based simulations you must have Java version 1.5 or higher installed on your computer." +
+                                                                          "        To download the latest version of Java, please visit: {0}.</p>" +
+                                                                          "<p>" +
+                                                                          "        If you are running the sims on a tablet or Chromebook <a {1}>see here info on compatible sims</a>." +
+                                                                          "      </p>" );
+        StringUtils.addString( session, "troubleshooting.mobile.p2", "See our new HTML5 sims here: <a href=\"{0}\">http://phet.colorado.edu{0}</a>." );
+        StringUtils.addString( session, "troubleshooting.mobile.p3", "Or watch a video about our new HTML5 efforts: {0}." );
+        StringUtils.addString( session, "troubleshooting.mobile.p4", "Additionally, Chromebooks can run our Flash sims. For a list of Chromebook-compatible sims: <a href=\"{0}\">http://phet.colorado.edu{0}</a>." );
+        StringUtils.addString( session, "troubleshooting.mobile.p6", "Our plan is to port most of the sims eventually to HTML5, but there are likely some less popular sims that will not be ported. It may be" +
+                                                                     "        several years before the majority of PhET sims are converted to HTML5 (we have been publishing ~1 sim per month). This is because porting the" +
+                                                                     "        sims to HTML5 is very expensive for us - it basically involves redesigning the sim for touch, rewriting all of the sim and model code, then" +
+                                                                     "        testing on an array of devices." );
 
         session.close();
     }

@@ -119,14 +119,21 @@
       </a>
 
       <div id="q6" class="answer" wicket:id="troubleshooting-main-q6-answer">
-        <p>PhET simulations work best at a screen resolution of 1024 x 768 pixels. (Some of them are written so that
-          they
-          cannot be resized.) At lower resolution (e.g. 800 x 600), all the controls may not fit on your screen.
-          At higher
-          resolution (e.g. 1280 x 1024), you may not be able to make the simulation fill the whole screen, or if
-          you do,
-          it may slow down performance. To change your screen resolution, follow the directions below:</p>
+        <p>The HTML5 sims are optimized for an iPad2 resolution (1024 x 768 pixels), but work on other resolutions and will scale based on your device
+          resolution.</p>
 
+        <p>The Java and Flash PhET simulations work best at a screen resolution of 1024 x 768 pixels or higher. (Some of them are written so that they
+          cannot be resized.) At lower resolution (e.g. 800 x 600), all the controls may not fit on your screen. To change your screen resolution,
+          follow the directions below:</p>
+
+        <p><strong>Windows 7/8</strong></p>
+
+        <ol>
+          <li>From Start menu, click on "Control Panel."</li>
+          <li>Choose "Display".</li>
+          <li>Press "Adjust screen resolution".</li>
+          <li>Use the "Resolution" slider to select a resolution and click "OK."</li>
+        </ol>
         <p><strong>Windows Vista</strong></p>
 
         <ol>
@@ -153,7 +160,6 @@
           <li>Open the System Preferences (either from the Dock or from the Apple menu).</li>
           <li>Open the Displays Panel and choose the Display tab.</li>
           <li>On the left of the Displays tab you can select one of the Resolutions from the list.</li>
-          <li>Quit or close the System Preferences when done.</li>
         </ol>
       </div>
 
@@ -161,39 +167,43 @@
         <h2 id="mobileDevices-header" class="question triangle-right" onclick="return false"
             onmousedown="return phet.toggleExpandableText('mobileDevices')">
           <wicket:message key="faq.mobileDevices.title">
-            Can PhET simulations be used on my tablet/iPad/Android devices?
+            Can PhET simulations be used on my tablet/iPad/Android/Chromebook devices?
           </wicket:message>
         </h2>
       </a>
 
       <div id="mobileDevices" class="answer" wicket:id="mobileDevices-answer">
         <p>
-          At this time tablet/iPad/Android devices platforms do not fully support Java or Flash, which is required to run PhET
-          simulations.
+          The Java and Flash simulations cannot run on a tablet/iPad/Android device because those devices do not fully support Java or Flash, which is
+          required to run the Java and Flash PhET sims.
         </p>
-        <ul>
-          <li>
-            iPads lack full support of Java and Flash so our sims currently cannot run on the interface. Our sims also aren't
-            developed for touch devices and the mobile devices usually perform very poorly when running our simulations due to lack
-            of processing power.
-          </li>
-          <li>
-            Android devices cannot run full Java programs like PhET sims, just Android Java programs. Flash sims have poor
-            performance and user input response.
-          </li>
-        </ul>
+
+        <p><strong>iPad</strong></p>
+
         <p>
-          In addition to the lack of support for required platforms, porting PhET sims to iPad/ tablet devices is not simply a matter
-          of rewriting the code in another language. PhET sims are designed for devices with a mouse and keyboard. There are certain
-          things that are awkward with a touch screen (like typing, especially when the virtual keyboard covers what you want to look
-          at), right clicking...and some things that are impossible, such as hovering over objects.
+          The HTML5 PhET sims are supported on iPad2 or later. For iPad compatible sims
+          <a href="http://phet.colorado.edu/en/simulations/category/by-device/ipad-tablet">click
+            here</a>.
+        </p>
+
+        <p><strong>Chromebook</strong></p>
+
+        <p>
+          The HTML5 and Flash PhET sims are supported on all Chromebooks using the latest version of Google Chrome. For Chromebook compatible sims
+          <a href="http://phet.colorado.edu/en/simulations/category/by-device/chromebook">click here</a>.
+        </p>
+
+        <p><strong>Android</strong></p>
+
+        <p>
+          We do not currently test our simulations on Android devices due to the fragmented nature of the device ecosystem. However, the <a
+            href="http://phet.colorado.edu/en/simulations/category/by-device/ipad-tablet">HTML5 sims</a> <i>should</i> function. For optimal
+          performance, we recommend opening the sims in the latest version of Google Chrome.
         </p>
 
         <p>
-          If your school district is considering the purchase of iPads or tablet devices, please understand that PhET simulations will
-          either not function or perform poorly. We recommend laptops or netbooks for using our simulations using our
-          <a href="#q2-header">system
-            requirements</a>.
+          If your school district is considering the purchase of iPads or tablet devices, please understand that you will be limited to HTML5
+          sims. For more information, see our <a href="http://phet.colorado.edu/en/faqs#q2">system requirements</a>.
         </p>
       </div>
 

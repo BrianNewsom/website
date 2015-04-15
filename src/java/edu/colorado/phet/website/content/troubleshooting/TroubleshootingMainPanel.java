@@ -14,6 +14,7 @@ import edu.colorado.phet.website.util.PhetRequestCycle;
 import edu.colorado.phet.website.util.links.AbstractLinker;
 import edu.colorado.phet.website.util.links.RawLinkable;
 
+
 /**
  * General troubleshooting panel
  */
@@ -31,7 +32,8 @@ public class TroubleshootingMainPanel extends PhetPanel {
         } ) );
 
         add( new LocalizedText( "troubleshooting-main-q1-answer", "troubleshooting.main.q1.answer", new Object[]{
-                "href=\"https://www.java.com\""
+                "<a href=\"https://www.java.com/\">https://www.java.com</a>",
+                GeneralFAQPanel.getLinker().getHrefWithHash( context, getPhetCycle(), "q2" )
         } ) );
 
 
