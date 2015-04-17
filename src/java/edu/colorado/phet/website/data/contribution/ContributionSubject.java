@@ -20,7 +20,6 @@ public class ContributionSubject implements Serializable, IntId {
 
     private static final Logger logger = Logger.getLogger( ContributionSubject.class.getName() );
 
-
     public ContributionSubject() {
 
     }

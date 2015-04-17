@@ -11,6 +11,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+import org.apache.commons.io.FilenameUtils;
 import org.apache.log4j.Logger;
 import org.apache.wicket.Component;
 
@@ -48,6 +49,18 @@ public class ContributionFile implements Serializable, IntId {
     public File getFileLocation() {
         return new File( PhetWicketApplication.get().getActivitiesRoot(), getRelativeLocation() );
     }
+
+    public String getFileExtension() {
+        return FilenameUtils.getExtension( filename );
+    }
+
+    public String getFileImageLocation() {
+        String ext = getFileExtension();
+        String imageLocation = "/images/icons/file-types/";
+        // TODO: Figure out way to switch on string
+        return imageLocation + "file-icon.png";
+    }
+
 
     public String getRelativeLocation() {
         return getRelativeLocation( String.valueOf( contribution.getId() ) );

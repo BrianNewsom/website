@@ -169,6 +169,11 @@ public class StringChanges {
                                                                      "        sims to HTML5 is very expensive for us - it basically involves redesigning the sim for touch, rewriting all of the sim and model code, then" +
                                                                      "        testing on an array of devices." );
 
+        StringUtils.overwriteString( session, "contribution.view.addComment", "Add Comment", "Comment" );
+        StringUtils.overwriteString( session, "contribution.view.simulations", "Simulations", "Simulation(s)" );
+        StringUtils.overwriteString( session, "contribution.view.authors", "Authors", "Author(s)" );
+        StringUtils.overwriteString( session, "contribution.view.zipDownload", "Or you may <a {0}>download</a> all " +
+                "files as a compressed zip archive.", "<a {0}>Download</a> all files as a compressed .zip");
         session.close();
     }
 
