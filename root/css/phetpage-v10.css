@@ -482,6 +482,10 @@ pre {
   border-collapse: collapse;
 }
 
+.phet-table-bottom-pad {
+  padding-bottom: 20px !important;
+}
+
 .phet-table td, th {
   padding: 5px 10px;
 }
@@ -489,3 +493,4 @@ pre {
 td.translation-table-icon {
   padding: 5px 0 5px 5px;
 }
+

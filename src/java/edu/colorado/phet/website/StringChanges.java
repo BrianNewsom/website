@@ -173,7 +173,9 @@ public class StringChanges {
         StringUtils.overwriteString( session, "contribution.view.simulations", "Simulations", "Simulation(s)" );
         StringUtils.overwriteString( session, "contribution.view.authors", "Authors", "Author(s)" );
         StringUtils.overwriteString( session, "contribution.view.zipDownload", "Or you may <a {0}>download</a> all " +
-                "files as a compressed zip archive.", "<a {0}>Download</a> all files as a compressed .zip");
+                "files as a compressed zip archive.", "<a {0}>Download</a> all files as a compressed .zip" );
+        StringUtils.overwriteString( session, "contribution.view.submitted", "Submitted", "Date submitted" );
+        StringUtils.overwriteString( session, "contribution.view.updated", "Updated", "Date updated" );
         session.close();
     }
 

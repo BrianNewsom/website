@@ -141,10 +141,87 @@ div.rtl .comment-clear {
 
 .add-comment-holder {
     /*margin: 0 50px;*/
-    text-align: right;
+    text-align: left;
 }
 
-.add-comment-text {
-    
+textarea#contribution-comment-text-id {
+    float: left;
+    margin-right: 15px;
+    width: 73%;
 }
 
+.contribution-comment-info {
+    color: grey;
+}
+
+#contribution-comment-button {
+    margin-top: 20px;
+    margin-left: -100px;
+}
+
+ul.file-list {
+    margin-left: -50px;
+    margin-top: 0px;
+}
+
+/* Eliminate traditional bullets */
+li.file {
+    list-style: none;
+    margin-bottom: 1px;
+}
+
+/* Set default file icon centered vertically, override for any specific class */
+li.file:before {
+    position: relative;
+    top: 5px;
+    width: 2em;
+    height: 2em;
+    content: '';
+    display: inline-block;
+    background-image: url('/images/icons/file-types/file-icon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+li.file.xlsx:before {
+    background-image: url('/images/icons/file-types/excel-icon.png');
+}
+
+li.file.pdf:before {
+    background-image: url('/images/icons/file-types/pdf-icon.png');
+}
+
+li.file.ppt:before {
+    background-image: url('/images/icons/file-types/powerpoint-icon.png');
+}
+
+li.file.pptx:before {
+    background-image: url('/images/icons/file-types/powerpoint-icon.png');
+}
+
+li.file.txt:before {
+    background-image: url('/images/icons/file-types/txt-icon.png');
+}
+
+li.file.doc:before {
+    background-image: url('/images/icons/file-types/word-icon.png');
+}
+
+li.file.docx:before {
+    background-image: url('/images/icons/file-types/word-icon.png');
+}
+
+/* Top of tables */
+.contribution-row {
+    border-color: #2a326a;
+    color: #2a326a;
+    background-color: #2a326a;
+    height: 1px;
+    border: 0px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.list-fixed-width {
+    width: 125px;
+}
