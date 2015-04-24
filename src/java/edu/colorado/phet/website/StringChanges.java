@@ -149,7 +149,7 @@ public class StringChanges {
                                                                  "            </p>" +
                                                                  "            <p><strong>Android</strong><br/>" +
                                                                  "              We do not currently test our simulations on Android devices due to the fragmented nature of the device ecosystem. However, the " +
-                                                                 "                <a {1}>HTML5 sims</a> <i>should</i> function. For optimal" +
+                                                                 "                <a {0}>HTML5 sims</a> <i>should</i> function. For optimal" +
                                                                  "              performance, we recommend opening the sims in the latest version of Google Chrome." +
                                                                  "            </p>" +
                                                                  "        <p>" +

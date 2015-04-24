@@ -33,7 +33,7 @@ public class TroubleshootingMainPanel extends PhetPanel {
 
         add( new LocalizedText( "troubleshooting-main-q1-answer", "troubleshooting.main.q1.answer", new Object[]{
                 "<a href=\"https://www.java.com/\">https://www.java.com</a>",
-                GeneralFAQPanel.getLinker().getHrefWithHash( context, getPhetCycle(), "q2" )
+                GeneralFAQPanel.getLinker().getHrefWithHash( context, getPhetCycle(), "q2-header" )
         } ) );
 
 

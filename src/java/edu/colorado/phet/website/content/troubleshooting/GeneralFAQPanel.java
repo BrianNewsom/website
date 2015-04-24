@@ -52,7 +52,10 @@ public class GeneralFAQPanel extends PhetPanel {
         add( new LocalizedText( "mobileDevices-answer", "faq.mobileDevices.answer", new Object[] {
                 CategoryPage.getLinker( "by-device/ipad-tablet" ).getHref( context, getPhetCycle() ),
                 CategoryPage.getLinker( "by-device/chromebook" ).getHref( context, getPhetCycle() ),
-                GeneralFAQPanel.getLinker().getHrefWithHash( context, getPhetCycle(), "q2" )
+
+                // make the text expand when clicking this click too, if it isn't expanded already
+                GeneralFAQPanel.getLinker().getHrefWithHash( context, getPhetCycle(), "q2-header" ) +
+                " onclick=\"var e = document.getElementById( id ); if ( !e.style.height || e.style.height === '0px' ) {phet.toggleExpandableText('q2');} return true;\""
         } ) );
 
         add( new LocalizedText( "troubleshooting-main-q15-answer", "troubleshooting.main.q15.answer" ) );
