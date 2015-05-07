@@ -482,9 +482,6 @@ pre {
   border-collapse: collapse;
 }
 
-.phet-table-bottom-pad {
-  padding-bottom: 20px !important;
-}
 
 .phet-table td, th {
   padding: 5px 10px;

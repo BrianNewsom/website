@@ -223,5 +223,20 @@ li.file.docx:before {
 }
 
 .list-fixed-width {
+    padding: 1px 5px !important;
     width: 125px;
 }
+
+.phet-table-top-pad {
+    padding-top: 2px
+}
+.phet-table-bottom-pad {
+    padding: 1px 5px 17px !important;
+    /* padding: 1px 5px; */
+}
+
+td.list-highlight-background.list-fixed-width.phet-table-padding-top {
+    padding-top: 5px !important;
+}
+
+
