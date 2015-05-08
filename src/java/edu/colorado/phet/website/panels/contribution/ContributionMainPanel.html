@@ -48,7 +48,7 @@
         <br/>
         <hr class="contribution-row">
 
-        <table class="phet-table">
+        <table class="phet-table compact-phet-table">
           <!--<tr>-->
             <!--<td colspan="2">-->
               <!--<h3>-->
@@ -166,7 +166,7 @@
                     <!--</h3>-->
                 <!--</td>-->
             <!--</tr>-->
-      <table class="phet-table">
+      <table class="phet-table compact-phet-table">
             <tr valign="top">
                 <td class="list-highlight-background list-fixed-width  phet-table-top-pad"><strong>
                     <wicket:message key="contribution.view.authors">
@@ -252,7 +252,7 @@
 
         <form wicket:id="add-comment-form" method="get">
           <div>
-            <h3>
+            <h3 id="contribution-comment-header">
               <wicket:message key="contribution.view.comments.header">
                 Comment on this activity
               </wicket:message>
@@ -273,7 +273,7 @@
                 </div>
 
                 <br/>
-                <input id="contribution-comment-button" type="submit" class="phet-button sign-in-button" name="submit"
+                <input id="contribution-comment-button" type="submit" class="phet-button" name="submit"
                   wicket:message="value:contribution.view.addComment"/>
             </div>
         </form>

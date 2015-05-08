@@ -154,9 +154,17 @@ textarea#contribution-comment-text-id {
     color: grey;
 }
 
-#contribution-comment-button {
-    margin-top: 20px;
-    margin-left: -100px;
+.phet-button#contribution-comment-button {
+    margin-top: 10px;
+    margin-left: 307px;
+    color: black !important;
+    background-color: lightgray !important;
+    border: none;
+    line-height: initial !important;
+}
+
+.phet-button#contribution-comment-button:hover {
+    background-color: darkgray !important;
 }
 
 ul.file-list {
@@ -173,7 +181,7 @@ li.file {
 /* Set default file icon centered vertically, override for any specific class */
 li.file:before {
     position: relative;
-    top: 5px;
+    top: .58em;
     width: 2em;
     height: 2em;
     content: '';
@@ -222,8 +230,11 @@ li.file.docx:before {
     margin-bottom: 0;
 }
 
+.phet-table.compact-phet-table td, th {
+    padding: 1px 5px;
+}
+
 .list-fixed-width {
-    padding: 1px 5px !important;
     width: 125px;
 }
 
@@ -235,8 +246,14 @@ li.file.docx:before {
     /* padding: 1px 5px; */
 }
 
+td.list-highlight-background.phet-table-bottom-pad {
+    padding-bottom: 17px !important;
+}
+
 td.list-highlight-background.list-fixed-width.phet-table-padding-top {
     padding-top: 5px !important;
 }
 
-
+h3#contribution-comment-header {
+    margin-bottom: 3px;
+}
